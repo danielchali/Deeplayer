@@ -77,14 +77,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "DPlayer — The Smart Player for Your Videos" },
+      {
+        name: "description",
+        content:
+          "DPlayer understands your videos. AI subtitles, live translation, smart episode order, cloud streaming, and Study Mode. Play. Understand. Learn.",
+      },
+      { name: "author", content: "DPlayer" },
+      { property: "og:title", content: "DPlayer — The Smart Player for Your Videos" },
+      {
+        property: "og:description",
+        content:
+          "AI subtitles, live translation and dubbing, smart episode detection, streaming from anywhere, and Study Mode.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
