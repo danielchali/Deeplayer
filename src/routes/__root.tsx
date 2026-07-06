@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import logoAsset from "@/assets/dplayer-logo.png.asset.json";
 import {
   Outlet,
   Link,
@@ -98,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: logoAsset.url, type: "image/png" },
     ],
   }),
   shellComponent: RootShell,

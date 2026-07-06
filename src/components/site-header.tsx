@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Play } from "lucide-react";
+import logoAsset from "@/assets/dplayer-logo.png.asset.json";
 
 export function SiteHeader() {
   const linkCls =
@@ -8,9 +8,11 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 glass">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand shadow-glow">
-            <Play className="h-4 w-4 text-primary-foreground" fill="currentColor" />
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="DPlayer logo"
+            className="h-8 w-auto"
+          />
           <span className="text-lg font-semibold tracking-tight">DPlayer</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
