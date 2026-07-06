@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Play } from "lucide-react";
+import logoAsset from "@/assets/dplayer-logo.png.asset.json";
 
 export function SiteHeader() {
   const linkCls =
