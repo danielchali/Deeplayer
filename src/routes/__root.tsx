@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import logoAsset from "@/assets/dplayer-logo.png.asset.json";
 import {
   Outlet,
   Link,
