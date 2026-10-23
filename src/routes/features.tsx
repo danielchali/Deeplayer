@@ -103,9 +103,9 @@ function FeaturesPage() {
     <div className="min-h-screen bg-hero">
       <SiteHeader />
 
-      <section className="mx-auto max-w-4xl px-4 sm:px-6 pt-10 sm:pt-20 pb-8 sm:pb-10 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-primary">Features</p>
-        <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-16 text-center">
+        <p className="text-sm font-medium text-primary">Features</p>
+        <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-normal">
           Every problem a <span className="text-gradient">media player</span> ignored.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">
@@ -113,21 +113,21 @@ function FeaturesPage() {
         </p>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 pb-12 sm:pb-16 space-y-6 sm:space-y-12">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 pb-12 sm:pb-16 space-y-0">
         {sections.map(({ icon: Icon, tag, title, body, bullets, grid, features }) => (
           <article
             key={title}
-            className="rounded-2xl glass p-5 sm:p-8 md:p-10 shadow-soft"
+            className="border-t border-border py-10 sm:py-14"
           >
             <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 sm:flex">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand text-primary-foreground shadow-glow">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent text-primary">
                 <Icon className="h-5 w-5" />
               </div>
-              <span className="min-w-0 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <span className="min-w-0 text-xs font-medium text-muted-foreground">
                 {tag}
               </span>
             </div>
-            <h2 className="mt-6 text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="mt-6 text-2xl md:text-3xl font-semibold tracking-normal">
               {title}
             </h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-3xl">{body}</p>
@@ -148,7 +148,7 @@ function FeaturesPage() {
                 {grid.map(({ icon: I, label }) => (
                   <div
                     key={label}
-                    className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm"
+                    className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 border-b border-border px-1 py-4 text-sm"
                   >
                     <I className="h-4 w-4 shrink-0 text-primary" />
                     {label}
@@ -162,13 +162,13 @@ function FeaturesPage() {
                 {features.map(({ icon: I, label }) => (
                   <div
                     key={label}
-                    className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm"
+                    className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 border-b border-border px-1 py-4 text-sm"
                   >
                     <I className="h-4 w-4 shrink-0 text-primary" />
                     {label}
                   </div>
                 ))}
-                <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg border border-dashed border-border px-4 py-3 text-sm text-muted-foreground">
+                <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 border-b border-dashed border-border px-1 py-4 text-sm text-muted-foreground">
                   Quiz & flashcard generation (planned)
                 </div>
               </div>

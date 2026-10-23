@@ -9,7 +9,7 @@ export function SiteHeader() {
   const linkCls =
     "inline-flex min-h-11 items-center text-sm text-muted-foreground hover:text-foreground transition-colors";
   return (
-    <header className="sticky top-0 z-40 glass">
+    <header className="sticky top-0 z-40 glass shadow-soft">
       <div className="mx-auto grid h-16 max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 md:flex md:justify-between">
         <Link to="/" className="flex min-w-0 items-center gap-2 group" onClick={() => setMenuOpen(false)}>
           <img
@@ -25,7 +25,7 @@ export function SiteHeader() {
           <Link to="/vision" className={linkCls} activeProps={{ className: "text-foreground" }}>Vision</Link>
         </nav>
         <div className="flex shrink-0 items-center gap-2">
-          <Button asChild className="hidden h-11 bg-brand shadow-glow sm:inline-flex">
+          <Button asChild variant="brand" className="hidden h-10 sm:inline-flex">
             <Link to="/" hash="download" onClick={() => setMenuOpen(false)}>Get Early Access</Link>
           </Button>
           <Button
@@ -47,7 +47,7 @@ export function SiteHeader() {
             <Link to="/" className={linkCls} onClick={() => setMenuOpen(false)}>Home</Link>
             <Link to="/features" className={linkCls} onClick={() => setMenuOpen(false)}>Features</Link>
             <Link to="/vision" className={linkCls} onClick={() => setMenuOpen(false)}>Vision</Link>
-            <Button asChild className="mt-2 h-11 w-full bg-brand shadow-glow sm:hidden">
+            <Button asChild variant="brand" className="mt-2 h-11 w-full sm:hidden">
               <Link to="/" hash="download" onClick={() => setMenuOpen(false)}>Get Early Access</Link>
             </Button>
           </div>
