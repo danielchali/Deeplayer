@@ -22,19 +22,31 @@ export const Route = createFileRoute("/features")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Features — DPlayer" },
+      { title: "DPlayer Features — AI Subtitles, Dubbing & Study Mode" },
       {
         name: "description",
         content:
           "AI subtitles, live translation, voice-matched dubbing, smart episode detection, universal streaming, and Study Mode inside one player.",
       },
-      { property: "og:title", content: "Features — DPlayer" },
+      {
+        name: "keywords",
+        content: "AI subtitles, video translation, AI dubbing, smart episode detection, study mode",
+      },
+      { property: "og:title", content: "DPlayer Features — AI Subtitles, Dubbing & Study Mode" },
       {
         property: "og:description",
         content:
           "Everything DPlayer does that a traditional media player can't.",
       },
+      { property: "og:url", content: "https://deeplayer.vercel.app/features" },
+      { name: "twitter:title", content: "DPlayer Features — AI Subtitles, Dubbing & Study Mode" },
+      {
+        name: "twitter:description",
+        content:
+          "AI subtitles, live translation, voice-matched dubbing, smart episode detection, universal streaming, and Study Mode inside one player.",
+      },
     ],
+    links: [{ rel: "canonical", href: "https://deeplayer.vercel.app/features" }],
   }),
   component: FeaturesPage,
 });

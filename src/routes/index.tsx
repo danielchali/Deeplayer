@@ -11,18 +11,20 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/dplayer-logo.png.asset.json";
-import heroImg from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "DPlayer — The Smart Player for Your Videos" },
-    { name: "description", content: "Play, understand, and learn with DPlayer: AI subtitles, translation, dubbing, smart episodes, and Study Mode." },
-    { property: "og:title", content: "DPlayer — The Smart Player for Your Videos" },
-    { property: "og:description", content: "Make your videos intelligent with AI subtitles, dubbing, and Study Mode." },
+    { title: "DPlayer — AI Subtitles, Translation & Smart Video Player" },
+    { name: "description", content: "Play, understand, and learn from any video with DPlayer. Get AI subtitles, translation, voice-matched dubbing, smart episode detection, and Study Mode." },
+    { name: "keywords", content: "AI video player, AI subtitles, video translation, AI dubbing, media player, study mode" },
+    { property: "og:title", content: "DPlayer — AI Subtitles, Translation & Smart Video Player" },
+    { property: "og:description", content: "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, and Study Mode." },
     { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://deeplayer.vercel.app/" },
+    { name: "twitter:title", content: "DPlayer — AI Subtitles, Translation & Smart Video Player" },
+    { name: "twitter:description", content: "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, and Study Mode." },
     { name: "twitter:card", content: "summary_large_image" },
-  ] }),
+  ], links: [{ rel: "canonical", href: "https://deeplayer.vercel.app/" }] }),
   component: Index,
 });
 
@@ -56,23 +58,23 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-10 sm:pt-14 pb-10 text-center">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-6 sm:pt-9 pb-7 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground shadow-soft">
             <Sparkles className="h-3.5 w-3.5 text-primary" />
             Now in early development
           </span>
-          <div className="mt-7 flex items-center justify-center gap-3 sm:gap-4">
-            <img src={logoAsset.url} alt="" className="h-14 sm:h-16 w-auto shrink-0" />
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight">DPlayer</h1>
+          <div className="mt-5 flex items-center justify-center gap-3 sm:gap-4">
+            <img src="/favicon.png" alt="" className="h-12 sm:h-14 w-auto shrink-0" />
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">DPlayer</h1>
           </div>
-          <p className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+          <p className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
             The <span className="text-gradient">smart player</span> for your videos.
           </p>
-          <p className="mt-5 mx-auto max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-4 mx-auto max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground">
             Media players are great at playing videos — DPlayer is built to understand them.
             Subtitles, translation, dubbing, and answers, all inside the player.
           </p>
-          <div className="mt-7 grid gap-3 max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+          <div className="mt-5 grid gap-3 max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
             <Button asChild variant="brand" className="h-11 px-6">
               <a href="#download">Get Early Access <ArrowRight className="h-4 w-4" /></a>
             </Button>
@@ -80,11 +82,10 @@ function Index() {
               <Link to="/features">Explore features <ArrowRight className="h-4 w-4" /></Link>
             </Button>
           </div>
-          <div className="relative mx-auto mt-9 max-w-3xl overflow-hidden rounded-lg shadow-soft">
-            <img src={heroImg} alt="DPlayer visualizing AI subtitles, translation and neural analysis over a film frame" width={1024} height={1024} className="w-full aspect-[2.6/1] sm:aspect-[3/1] object-cover object-center" />
-            <div className="brand-rule absolute bottom-0 inset-x-0 h-1" />
+          <div className="mx-auto mt-7 flex justify-center">
+            <img src="/favicon.png" alt="DPlayer logo" className="h-20 w-20 sm:h-24 sm:w-24" />
           </div>
-          <dl className="mt-8 mx-auto grid grid-cols-3 gap-3 max-w-md">
+          <dl className="mt-6 mx-auto grid grid-cols-3 gap-3 max-w-md">
             {[["100+", "Languages"], ["1-click", "AI subtitles"], ["∞", "Sources"]].map(([k, v]) => (
               <div key={v} className="min-w-0">
                 <dt className="text-2xl font-semibold">{k}</dt>

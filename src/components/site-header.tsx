@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/dplayer-logo.png.asset.json";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +12,7 @@ export function SiteHeader() {
       <div className="mx-auto grid h-16 max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 md:flex md:justify-between">
         <Link to="/" className="flex min-w-0 items-center gap-2 group" onClick={() => setMenuOpen(false)}>
           <img
-            src={logoAsset.url}
+            src="/favicon.png"
             alt="DPlayer logo"
             className="h-8 w-auto shrink-0"
           />

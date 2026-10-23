@@ -83,16 +83,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "DPlayer understands your videos. AI subtitles, live translation, smart episode order, cloud streaming, and Study Mode. Play. Understand. Learn.",
+          "Play, understand, and learn from any video with DPlayer. Get AI subtitles, translation, voice-matched dubbing, smart episode detection, and Study Mode.",
       },
       { name: "author", content: "DPlayer" },
+      {
+        name: "keywords",
+        content:
+          "AI video player, AI subtitles, video translation, AI dubbing, media player, study mode",
+      },
       { property: "og:title", content: "DPlayer — The Smart Player for Your Videos" },
       {
         property: "og:description",
         content:
-          "AI subtitles, live translation and dubbing, smart episode detection, streaming from anywhere, and Study Mode.",
+          "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, and Study Mode.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "DPlayer" },
+      { property: "og:image", content: "https://deeplayer.vercel.app/og-image.jpg" },
+      { name: "twitter:title", content: "DPlayer — The Smart Player for Your Videos" },
+      {
+        name: "twitter:description",
+        content:
+          "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, and Study Mode.",
+      },
+      { name: "twitter:image", content: "https://deeplayer.vercel.app/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

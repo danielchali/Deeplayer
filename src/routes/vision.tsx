@@ -9,19 +9,31 @@ export const Route = createFileRoute("/vision")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Vision — DPlayer" },
+      { title: "DPlayer Vision — A Smarter Media Player for Any Video" },
       {
         name: "description",
         content:
           "DPlayer isn't trying to replace VLC. It's making media intelligent — so you can play, understand, and learn from any video.",
       },
-      { property: "og:title", content: "Vision — DPlayer" },
+      {
+        name: "keywords",
+        content: "intelligent media player, video understanding, AI video, DPlayer vision",
+      },
+      { property: "og:title", content: "DPlayer Vision — A Smarter Media Player for Any Video" },
       {
         property: "og:description",
         content:
           "Why DPlayer exists and where it is going. Play. Understand. Learn.",
       },
+      { property: "og:url", content: "https://deeplayer.vercel.app/vision" },
+      { name: "twitter:title", content: "DPlayer Vision — A Smarter Media Player for Any Video" },
+      {
+        name: "twitter:description",
+        content:
+          "DPlayer makes media intelligent — so you can play, understand, and learn from any video.",
+      },
     ],
+    links: [{ rel: "canonical", href: "https://deeplayer.vercel.app/vision" }],
   }),
   component: VisionPage,
 });
