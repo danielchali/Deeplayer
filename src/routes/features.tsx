@@ -20,6 +20,8 @@ import { SiteFooter } from "@/components/site-footer";
 export const Route = createFileRoute("/features")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Features — DPlayer" },
       {
         name: "description",
@@ -101,9 +103,9 @@ function FeaturesPage() {
     <div className="min-h-screen bg-hero">
       <SiteHeader />
 
-      <section className="mx-auto max-w-4xl px-6 pt-20 pb-10 text-center">
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 pt-10 sm:pt-20 pb-8 sm:pb-10 text-center">
         <p className="text-sm uppercase tracking-[0.2em] text-primary">Features</p>
-        <h1 className="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">
+        <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
           Every problem a <span className="text-gradient">media player</span> ignored.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">
@@ -111,17 +113,17 @@ function FeaturesPage() {
         </p>
       </section>
 
-      <div className="mx-auto max-w-5xl px-6 pb-16 space-y-12">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 pb-12 sm:pb-16 space-y-6 sm:space-y-12">
         {sections.map(({ icon: Icon, tag, title, body, bullets, grid, features }) => (
           <article
             key={title}
-            className="rounded-2xl glass p-8 md:p-10 shadow-soft"
+            className="rounded-2xl glass p-5 sm:p-8 md:p-10 shadow-soft"
           >
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand text-primary-foreground shadow-glow">
+            <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 sm:flex">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand text-primary-foreground shadow-glow">
                 <Icon className="h-5 w-5" />
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <span className="min-w-0 text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {tag}
               </span>
             </div>
@@ -134,7 +136,7 @@ function FeaturesPage() {
               <ul className="mt-6 grid gap-2 md:grid-cols-2 max-w-2xl">
                 {bullets.map((b) => (
                   <li key={b} className="flex items-center gap-2 text-sm">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     {b}
                   </li>
                 ))}
@@ -142,13 +144,13 @@ function FeaturesPage() {
             )}
 
             {grid && (
-              <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="mt-6 grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 gap-3">
                 {grid.map(({ icon: I, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm"
+                    className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm"
                   >
-                    <I className="h-4 w-4 text-primary" />
+                    <I className="h-4 w-4 shrink-0 text-primary" />
                     {label}
                   </div>
                 ))}
@@ -160,13 +162,13 @@ function FeaturesPage() {
                 {features.map(({ icon: I, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm"
+                    className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm"
                   >
-                    <I className="h-4 w-4 text-primary" />
+                    <I className="h-4 w-4 shrink-0 text-primary" />
                     {label}
                   </div>
                 ))}
-                <div className="flex items-center gap-3 rounded-lg border border-dashed border-border px-4 py-3 text-sm text-muted-foreground">
+                <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg border border-dashed border-border px-4 py-3 text-sm text-muted-foreground">
                   Quiz & flashcard generation (planned)
                 </div>
               </div>

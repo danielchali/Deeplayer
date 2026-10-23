@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/vision")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Vision — DPlayer" },
       {
         name: "description",
@@ -28,9 +31,9 @@ function VisionPage() {
     <div className="min-h-screen bg-hero">
       <SiteHeader />
 
-      <section className="mx-auto max-w-3xl px-6 pt-24 pb-16">
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-16">
         <p className="text-sm uppercase tracking-[0.2em] text-primary">Vision</p>
-        <h1 className="mt-4 text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+        <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
           More than a <span className="text-gradient">media player</span>.
         </h1>
         <p className="mt-8 text-lg text-muted-foreground">
@@ -40,7 +43,7 @@ function VisionPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-16 space-y-10 text-lg leading-relaxed text-foreground/90">
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 pb-12 sm:pb-16 space-y-10 text-lg leading-relaxed text-foreground/90">
         <div>
           <h2 className="text-2xl font-semibold tracking-tight">The moment it clicked</h2>
           <p className="mt-4 text-muted-foreground">
@@ -81,19 +84,21 @@ function VisionPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 pb-24">
-        <div className="rounded-2xl glass p-10 md:p-14 text-center shadow-soft">
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 pb-14 sm:pb-24">
+        <div className="rounded-2xl glass p-5 sm:p-10 md:p-14 text-center shadow-soft">
           <p className="text-sm uppercase tracking-[0.2em] text-primary">Vision</p>
-          <p className="mt-6 text-3xl md:text-5xl font-semibold tracking-tight">
+          <p className="mt-6 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
             <span className="text-gradient">DPlayer</span> — The Smart Player for Your Videos.
           </p>
           <p className="mt-6 text-xl text-muted-foreground">Play. Understand. Learn.</p>
+          <Button asChild className="mt-8 h-11 w-full bg-brand shadow-glow sm:w-auto">
           <Link
             to="/features"
-            className="mt-10 inline-flex h-11 items-center gap-2 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow"
+            className="inline-flex h-11 items-center gap-2 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow"
           >
             See what it does <ArrowRight className="h-4 w-4" />
           </Link>
+          </Button>
         </div>
       </section>
 

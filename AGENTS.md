@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shared navigation in SiteHeader with a collapsible mobile menu; this preserves access to every page at narrow widths.
+- Use mobile-first page spacing and min-width-safe grids; this prevents content and controls from overflowing small screens.
