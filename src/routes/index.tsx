@@ -10,9 +10,18 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({ meta: [
+    { title: "DPlayer — The Smart Player for Your Videos" },
+    { name: "description", content: "Play, understand, and learn with DPlayer: AI subtitles, translation, dubbing, smart episodes, and Study Mode." },
+    { property: "og:title", content: "DPlayer — The Smart Player for Your Videos" },
+    { property: "og:description", content: "Make your videos intelligent with AI subtitles, dubbing, and Study Mode." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   component: Index,
 });
 
@@ -46,13 +55,13 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 grid gap-14 md:grid-cols-2 md:items-center">
-          <div>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-10 pb-12 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-24 grid gap-10 lg:gap-14 lg:grid-cols-2 lg:items-center">
+          <div className="min-w-0">
             <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-muted-foreground">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
               Now in early development
             </span>
-            <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
               The <span className="text-gradient">smart player</span> for your videos.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
@@ -60,22 +69,26 @@ function Index() {
               <em className="not-italic text-foreground/90"> understand</em> them.
               Subtitles, translation, dubbing, and answers, all inside the player.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+              <Button asChild className="h-11 bg-brand shadow-glow">
               <a
                 href="#download"
-                className="inline-flex h-11 items-center gap-2 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
               >
                 Get Early Access <ArrowRight className="h-4 w-4" />
               </a>
+              </Button>
+              <Button asChild variant="outline" className="h-11">
               <Link
                 to="/features"
-                className="inline-flex h-11 items-center rounded-md border border-border px-6 text-sm font-medium hover:bg-secondary transition-colors"
+                className="inline-flex h-11 items-center justify-center rounded-md border border-border px-6 text-sm font-medium hover:bg-secondary transition-colors"
               >
                 Explore features
               </Link>
+              </Button>
             </div>
 
-            <dl className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+            <dl className="mt-8 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-md">
               {[
                 ["100+", "Languages"],
                 ["1-click", "AI subtitles"],
@@ -91,7 +104,7 @@ function Index() {
             </dl>
           </div>
 
-          <div className="relative">
+          <div className="relative min-w-0 mx-auto w-full max-w-lg lg:max-w-none">
             <div className="absolute -inset-6 bg-brand opacity-20 blur-3xl rounded-full" />
             <div className="relative rounded-2xl overflow-hidden border border-border shadow-soft">
               <img
@@ -107,7 +120,7 @@ function Index() {
       </section>
 
       {/* Why DPlayer */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.2em] text-primary">Why DPlayer</p>
           <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -119,7 +132,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map(({ icon: Icon, title, body }) => (
             <article
               key={title}
@@ -137,8 +150,8 @@ function Index() {
       </section>
 
       {/* Story block */}
-      <section className="mx-auto max-w-4xl px-6 py-20">
-        <div className="rounded-2xl glass p-8 md:p-12 shadow-soft">
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-20">
+        <div className="rounded-2xl glass p-5 sm:p-8 md:p-12 shadow-soft">
           <Mic2 className="h-6 w-6 text-primary" />
           <blockquote className="mt-6 text-2xl md:text-3xl font-medium leading-snug tracking-tight">
             “Imagine watching a Japanese film with no subtitles and no English audio.
@@ -153,8 +166,8 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section id="download" className="mx-auto max-w-4xl px-6 py-24 text-center">
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
+      <section id="download" className="mx-auto max-w-4xl px-4 sm:px-6 py-14 sm:py-24 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
           Play. <span className="text-gradient">Understand.</span> Learn.
         </h2>
         <p className="mt-5 text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -168,14 +181,15 @@ function Index() {
             type="email"
             required
             placeholder="you@domain.com"
-            className="flex-1 h-11 rounded-md bg-secondary/60 border border-border px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
+            aria-label="Email address"
+            className="min-w-0 w-full flex-1 h-11 rounded-md bg-secondary/60 border border-border px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
           />
-          <button
+          <Button
             type="submit"
             className="h-11 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow"
           >
             Notify me
-          </button>
+          </Button>
         </form>
       </section>
 

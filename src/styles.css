@@ -152,6 +152,10 @@
   }
 
   body {
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    letter-spacing: 0;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-feature-settings: "ss01", "cv11";
@@ -160,6 +164,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 }
 
@@ -185,4 +190,12 @@
   background: color-mix(in oklab, var(--card) 60%, transparent);
   backdrop-filter: blur(14px);
   border: 1px solid color-mix(in oklab, white 8%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
