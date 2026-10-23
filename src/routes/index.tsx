@@ -11,6 +11,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/dplayer-logo.png.asset.json";
 import heroImg from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -55,75 +56,50 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-10 pb-12 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-24 grid gap-10 lg:gap-14 lg:grid-cols-2 lg:items-center">
-          <div className="min-w-0">
-            <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-muted-foreground">
-              <Sparkles className="h-3.5 w-3.5 text-primary" />
-              Now in early development
-            </span>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-              The <span className="text-gradient">smart player</span> for your videos.
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Media players are great at playing videos — DPlayer is built to
-              <em className="not-italic text-foreground/90"> understand</em> them.
-              Subtitles, translation, dubbing, and answers, all inside the player.
-            </p>
-            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
-              <Button asChild className="h-11 bg-brand shadow-glow">
-              <a
-                href="#download"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
-              >
-                Get Early Access <ArrowRight className="h-4 w-4" />
-              </a>
-              </Button>
-              <Button asChild variant="outline" className="h-11">
-              <Link
-                to="/features"
-                className="inline-flex h-11 items-center justify-center rounded-md border border-border px-6 text-sm font-medium hover:bg-secondary transition-colors"
-              >
-                Explore features
-              </Link>
-              </Button>
-            </div>
-
-            <dl className="mt-8 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-md">
-              {[
-                ["100+", "Languages"],
-                ["1-click", "AI subtitles"],
-                ["∞", "Sources"],
-              ].map(([k, v]) => (
-                <div key={v}>
-                  <dt className="text-2xl font-semibold text-gradient">{k}</dt>
-                  <dd className="text-xs uppercase tracking-wider text-muted-foreground mt-1">
-                    {v}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-10 sm:pt-14 pb-10 text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground shadow-soft">
+            <Sparkles className="h-3.5 w-3.5 text-primary" />
+            Now in early development
+          </span>
+          <div className="mt-7 flex items-center justify-center gap-3 sm:gap-4">
+            <img src={logoAsset.url} alt="" className="h-14 sm:h-16 w-auto shrink-0" />
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight">DPlayer</h1>
           </div>
-
-          <div className="relative min-w-0 mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="absolute -inset-6 bg-brand opacity-20 blur-3xl rounded-full" />
-            <div className="relative rounded-2xl overflow-hidden border border-border shadow-soft">
-              <img
-                src={heroImg}
-                alt="DPlayer visualizing AI subtitles, translation and neural analysis over a film frame"
-                width={1024}
-                height={1024}
-                className="w-full h-auto"
-              />
-            </div>
+          <p className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+            The <span className="text-gradient">smart player</span> for your videos.
+          </p>
+          <p className="mt-5 mx-auto max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+            Media players are great at playing videos — DPlayer is built to understand them.
+            Subtitles, translation, dubbing, and answers, all inside the player.
+          </p>
+          <div className="mt-7 grid gap-3 max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+            <Button asChild variant="brand" className="h-11 px-6">
+              <a href="#download">Get Early Access <ArrowRight className="h-4 w-4" /></a>
+            </Button>
+            <Button asChild variant="link" className="h-11 px-4">
+              <Link to="/features">Explore features <ArrowRight className="h-4 w-4" /></Link>
+            </Button>
           </div>
+          <div className="relative mx-auto mt-9 max-w-3xl overflow-hidden rounded-lg shadow-soft">
+            <img src={heroImg} alt="DPlayer visualizing AI subtitles, translation and neural analysis over a film frame" width={1024} height={1024} className="w-full aspect-[2.6/1] sm:aspect-[3/1] object-cover object-center" />
+            <div className="brand-rule absolute bottom-0 inset-x-0 h-1" />
+          </div>
+          <dl className="mt-8 mx-auto grid grid-cols-3 gap-3 max-w-md">
+            {[["100+", "Languages"], ["1-click", "AI subtitles"], ["∞", "Sources"]].map(([k, v]) => (
+              <div key={v} className="min-w-0">
+                <dt className="text-2xl font-semibold">{k}</dt>
+                <dd className="text-xs text-muted-foreground mt-1">{v}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
       {/* Why DPlayer */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20">
-        <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary">Why DPlayer</p>
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm font-medium text-primary">Why DPlayer</p>
+          <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-normal">
             VLC and friends play videos. DPlayer understands them.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
@@ -136,10 +112,9 @@ function Index() {
           {highlights.map(({ icon: Icon, title, body }) => (
             <article
               key={title}
-              className="group rounded-xl glass p-6 hover:-translate-y-1 transition-transform"
-              style={{ transition: "var(--transition-smooth)" }}
+              className="group rounded-lg surface-soft p-6 hover:-translate-y-1 transition-transform"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-primary">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-primary">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="mt-5 font-semibold">{title}</h3>
@@ -151,9 +126,9 @@ function Index() {
 
       {/* Story block */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-20">
-        <div className="rounded-2xl glass p-5 sm:p-8 md:p-12 shadow-soft">
-          <Mic2 className="h-6 w-6 text-primary" />
-          <blockquote className="mt-6 text-2xl md:text-3xl font-medium leading-snug tracking-tight">
+        <div className="border-y border-border py-10 sm:py-14 text-center">
+          <Mic2 className="mx-auto h-6 w-6 text-primary" />
+          <blockquote className="mt-6 text-2xl md:text-3xl font-medium leading-snug tracking-normal">
             “Imagine watching a Japanese film with no subtitles and no English audio.
             <span className="text-gradient"> DPlayer transcribes, translates, and
             dubs it </span>
@@ -167,7 +142,7 @@ function Index() {
 
       {/* CTA */}
       <section id="download" className="mx-auto max-w-4xl px-4 sm:px-6 py-14 sm:py-24 text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-normal">
           Play. <span className="text-gradient">Understand.</span> Learn.
         </h2>
         <p className="mt-5 text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -182,11 +157,12 @@ function Index() {
             required
             placeholder="you@domain.com"
             aria-label="Email address"
-            className="min-w-0 w-full flex-1 h-11 rounded-md bg-secondary/60 border border-border px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
+            className="min-w-0 w-full flex-1 h-11 rounded-full bg-card border border-border px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
           />
           <Button
             type="submit"
-            className="h-11 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow"
+            variant="brand"
+            className="h-11 px-6"
           >
             Notify me
           </Button>

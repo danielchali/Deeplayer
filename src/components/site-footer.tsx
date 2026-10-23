@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/60 mt-10 sm:mt-20">
+    <footer className="border-t border-border bg-secondary/60 mt-10 sm:mt-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-10 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="min-w-0 text-center md:text-left text-sm text-muted-foreground">
           © {new Date().getFullYear()} DPlayer — Play. Understand. Learn.

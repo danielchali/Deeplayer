@@ -32,8 +32,8 @@ function VisionPage() {
       <SiteHeader />
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-16">
-        <p className="text-sm uppercase tracking-[0.2em] text-primary">Vision</p>
-        <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
+        <p className="text-sm font-medium text-primary">Vision</p>
+        <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-normal leading-[1.05]">
           More than a <span className="text-gradient">media player</span>.
         </h1>
         <p className="mt-8 text-lg text-muted-foreground">
@@ -45,7 +45,7 @@ function VisionPage() {
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 pb-12 sm:pb-16 space-y-10 text-lg leading-relaxed text-foreground/90">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">The moment it clicked</h2>
+          <h2 className="text-2xl font-semibold tracking-normal">The moment it clicked</h2>
           <p className="mt-4 text-muted-foreground">
             As someone who rarely watches a movie without subtitles — even in
             English — I got tired of chasing subtitle files across the internet,
@@ -56,7 +56,7 @@ function VisionPage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Not another play button</h2>
+          <h2 className="text-2xl font-semibold tracking-normal">Not another play button</h2>
           <p className="mt-4 text-muted-foreground">
             DPlayer isn't trying to replace VLC by adding one more toolbar icon.
             It's trying to make media intelligent. Whether you're watching a
@@ -67,7 +67,7 @@ function VisionPage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Principles</h2>
+          <h2 className="text-2xl font-semibold tracking-normal">Principles</h2>
           <ul className="mt-6 grid gap-4 md:grid-cols-2">
             {[
               ["Understand first", "Every feature starts from what the video means, not just how it plays."],
@@ -75,7 +75,7 @@ function VisionPage() {
               ["Respect the original", "Voice, tone, and intent are preserved when we translate or dub."],
               ["Save your time", "If a moment isn't in the video, we tell you fast."],
             ].map(([t, d]) => (
-              <li key={t} className="rounded-xl glass p-5">
+              <li key={t} className="rounded-lg surface-soft p-6">
                 <p className="font-semibold">{t}</p>
                 <p className="mt-2 text-sm text-muted-foreground">{d}</p>
               </li>
@@ -85,16 +85,16 @@ function VisionPage() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 sm:px-6 pb-14 sm:pb-24">
-        <div className="rounded-2xl glass p-5 sm:p-10 md:p-14 text-center shadow-soft">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary">Vision</p>
-          <p className="mt-6 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+        <div className="border-t border-border pt-10 sm:pt-14 text-center">
+          <p className="text-sm font-medium text-primary">Vision</p>
+          <p className="mt-6 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-normal">
             <span className="text-gradient">DPlayer</span> — The Smart Player for Your Videos.
           </p>
           <p className="mt-6 text-xl text-muted-foreground">Play. Understand. Learn.</p>
-          <Button asChild className="mt-8 h-11 w-full bg-brand shadow-glow sm:w-auto">
+          <Button asChild variant="brand" className="mt-8 h-11 w-full sm:w-auto">
           <Link
             to="/features"
-            className="inline-flex h-11 items-center gap-2 rounded-md bg-brand px-6 text-sm font-medium text-primary-foreground shadow-glow"
+            className="px-6"
           >
             See what it does <ArrowRight className="h-4 w-4" />
           </Link>
