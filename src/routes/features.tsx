@@ -31,7 +31,7 @@ export const Route = createFileRoute("/features")({
       { name: "description", content: FEATURES_DESCRIPTION },
       {
         name: "keywords",
-        content: "AI subtitles, video translation, AI dubbing, smart episode detection, study mode",
+        content: "DPlayer, DredLabs, Daniel Chali, AI subtitles, video translation, AI dubbing, smart episode detection, study mode",
       },
       { property: "og:title", content: FEATURES_TITLE },
       { property: "og:description", content: FEATURES_DESCRIPTION },

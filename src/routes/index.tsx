@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "DPlayer — AI Subtitles, Translation & Smart Video Player" },
     { name: "description", content: "Play, understand, and learn from any video with DPlayer. Get AI subtitles, translation, voice-matched dubbing, smart episode detection, and Study Mode." },
-    { name: "keywords", content: "AI video player, AI subtitles, video translation, AI dubbing, media player, study mode" },
+    { name: "keywords", content: "DPlayer, DredLabs, Daniel Chali, AI video player, AI subtitles, video translation, AI dubbing, media player, study mode" },
     { property: "og:title", content: "DPlayer — AI Subtitles, Translation & Smart Video Player" },
     { property: "og:description", content: "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, and Study Mode." },
     { property: "og:type", content: "website" },

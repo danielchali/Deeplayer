@@ -18,7 +18,7 @@ export const Route = createFileRoute("/vision")({
       { name: "description", content: VISION_DESCRIPTION },
       {
         name: "keywords",
-        content: "intelligent media player, video understanding, AI video, DPlayer vision",
+        content: "DPlayer, DredLabs, Daniel Chali, intelligent media player, video understanding, AI video, DPlayer vision",
       },
       { property: "og:title", content: VISION_TITLE },
       { property: "og:description", content: VISION_DESCRIPTION },

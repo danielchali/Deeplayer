@@ -90,11 +90,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           SITE_DESCRIPTION,
       },
-      { name: "author", content: "DPlayer" },
+      { name: "author", content: "Daniel Chali, DredLabs" },
+      { name: "publisher", content: "DredLabs" },
+      { name: "creator", content: "Daniel Chali" },
       {
         name: "keywords",
         content:
-          "AI video player, AI subtitles, video translation, AI dubbing, media player, study mode",
+          "DPlayer, DredLabs, Daniel Chali, AI video player, AI subtitles, video translation, AI dubbing, media player, study mode",
       },
       { property: "og:title", content: SITE_TITLE },
       {
