@@ -17,7 +17,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const SITE_URL = "https://danielchali.github.io/Deeplayer";
+const SITE_URL = "https://deeplayer.vercel.app";
 const FEATURES_TITLE = "DPlayer Features — AI Subtitles, Dubbing & Study Mode";
 const FEATURES_DESCRIPTION =
   "AI subtitles, live translation, voice-matched dubbing, smart episode detection, universal streaming, and Study Mode inside one player.";

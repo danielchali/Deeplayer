@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const SITE_URL = "https://danielchali.github.io/Deeplayer";
+const SITE_URL = "https://deeplayer.vercel.app";
 const VISION_TITLE = "DPlayer Vision — A Smarter Media Player for Any Video";
 const VISION_DESCRIPTION =
   "DPlayer makes media intelligent, so you can play, understand, and learn from any video.";

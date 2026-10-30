@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://danielchali.github.io/Deeplayer/sitemap.xml
+Sitemap: https://deeplayer.vercel.app/sitemap.xml

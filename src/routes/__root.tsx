@@ -14,7 +14,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-const SITE_URL = "https://danielchali.github.io/Deeplayer";
+const SITE_URL = "https://deeplayer.vercel.app";
 const SITE_TITLE = "DPlayer — The Smart Player for Your Videos";
 const SITE_DESCRIPTION =
   "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, smart episode detection, and Study Mode.";
