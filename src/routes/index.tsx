@@ -66,7 +66,7 @@ function Index() {
             Now in early development
           </span>
           <div className="mt-5 flex items-center justify-center gap-3 sm:gap-4">
-            <img src="/favicon.png" alt="" className="h-12 sm:h-14 w-auto shrink-0" />
+            <img src={`${import.meta.env.BASE_URL}favicon.png`} alt="" className="h-12 sm:h-14 w-auto shrink-0" />
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">DPlayer</h1>
           </div>
           <p className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
@@ -87,7 +87,7 @@ function Index() {
             </Button>
           </div>
           <div className="mx-auto mt-7 flex justify-center">
-            <img src="/favicon.png" alt="DPlayer logo" className="h-20 w-20 sm:h-24 sm:w-24" />
+            <img src={`${import.meta.env.BASE_URL}favicon.png`} alt="DPlayer logo" className="h-20 w-20 sm:h-24 sm:w-24" />
           </div>
           <dl className="mt-6 mx-auto grid grid-cols-3 gap-3 max-w-md">
             {[["100+", "Languages"], ["1-click", "AI subtitles"], ["∞", "Sources"]].map(([k, v]) => (

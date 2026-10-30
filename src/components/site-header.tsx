@@ -14,7 +14,7 @@ export function SiteHeader() {
       <div className="mx-auto grid h-16 max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 md:flex md:justify-between">
         <Link to="/" className="flex min-w-0 items-center gap-2 group" onClick={() => setMenuOpen(false)}>
           <img
-            src="/favicon.png"
+            src={`${import.meta.env.BASE_URL}favicon.png`}
             alt="DPlayer logo"
             className="h-8 w-auto shrink-0"
           />
