@@ -56,7 +56,7 @@ const highlights = [
   },
 ];
 
-const releaseUrl = "https://github.com/danielchali/DPlayer/releases/tag/v0.0.1";
+const releaseUrl = "https://github.com/danielchali/DPlayer/releases/download/v0.0.3/DPlayer-Setup-0.0.3-x64.exe";
 
 function Index() {
   return (

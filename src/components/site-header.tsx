@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const releaseUrl = "https://github.com/danielchali/DPlayer/releases/tag/v0.0.1";
+const releaseUrl = "https://github.com/danielchali/DPlayer/releases/download/v0.0.3/DPlayer-Setup-0.0.3-x64.exe";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
