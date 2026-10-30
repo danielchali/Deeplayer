@@ -17,36 +17,32 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
+const SITE_URL = "https://danielchali.github.io/Deeplayer";
+const FEATURES_TITLE = "DPlayer Features — AI Subtitles, Dubbing & Study Mode";
+const FEATURES_DESCRIPTION =
+  "AI subtitles, live translation, voice-matched dubbing, smart episode detection, universal streaming, and Study Mode inside one player.";
+
 export const Route = createFileRoute("/features")({
   head: () => ({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "DPlayer Features — AI Subtitles, Dubbing & Study Mode" },
-      {
-        name: "description",
-        content:
-          "AI subtitles, live translation, voice-matched dubbing, smart episode detection, universal streaming, and Study Mode inside one player.",
-      },
+      { title: FEATURES_TITLE },
+      { name: "description", content: FEATURES_DESCRIPTION },
       {
         name: "keywords",
         content: "AI subtitles, video translation, AI dubbing, smart episode detection, study mode",
       },
-      { property: "og:title", content: "DPlayer Features — AI Subtitles, Dubbing & Study Mode" },
-      {
-        property: "og:description",
-        content:
-          "Everything DPlayer does that a traditional media player can't.",
-      },
-      { property: "og:url", content: "https://deeplayer.vercel.app/features" },
-      { name: "twitter:title", content: "DPlayer Features — AI Subtitles, Dubbing & Study Mode" },
-      {
-        name: "twitter:description",
-        content:
-          "AI subtitles, live translation, voice-matched dubbing, smart episode detection, universal streaming, and Study Mode inside one player.",
-      },
+      { property: "og:title", content: FEATURES_TITLE },
+      { property: "og:description", content: FEATURES_DESCRIPTION },
+      { property: "og:site_name", content: "DPlayer" },
+      { property: "og:url", content: `${SITE_URL}/features` },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+      { name: "twitter:title", content: FEATURES_TITLE },
+      { name: "twitter:description", content: FEATURES_DESCRIPTION },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
     ],
-    links: [{ rel: "canonical", href: "https://deeplayer.vercel.app/features" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/features` }],
   }),
   component: FeaturesPage,
 });

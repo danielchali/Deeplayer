@@ -14,6 +14,11 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+const SITE_URL = "https://danielchali.github.io/Deeplayer";
+const SITE_TITLE = "DPlayer — The Smart Player for Your Videos";
+const SITE_DESCRIPTION =
+  "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, smart episode detection, and Study Mode.";
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -79,11 +84,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DPlayer — The Smart Player for Your Videos" },
+      { title: SITE_TITLE },
       {
         name: "description",
         content:
-          "Play, understand, and learn from any video with DPlayer. Get AI subtitles, translation, voice-matched dubbing, smart episode detection, and Study Mode.",
+          SITE_DESCRIPTION,
       },
       { name: "author", content: "DPlayer" },
       {
@@ -91,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "AI video player, AI subtitles, video translation, AI dubbing, media player, study mode",
       },
-      { property: "og:title", content: "DPlayer — The Smart Player for Your Videos" },
+      { property: "og:title", content: SITE_TITLE },
       {
         property: "og:description",
         content:
@@ -99,14 +104,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "DPlayer" },
-      { property: "og:image", content: "https://deeplayer.vercel.app/og-image.jpg" },
-      { name: "twitter:title", content: "DPlayer — The Smart Player for Your Videos" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+      { property: "og:image:alt", content: "DPlayer smart video player" },
+      { name: "twitter:title", content: SITE_TITLE },
       {
         name: "twitter:description",
         content:
           "Play, understand, and learn from any video with AI subtitles, translation, voice-matched dubbing, and Study Mode.",
       },
-      { name: "twitter:image", content: "https://deeplayer.vercel.app/og-image.jpg" },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
+      { name: "twitter:image:alt", content: "DPlayer smart video player" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -114,6 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "icon", type: "image/png", href: `${import.meta.env.BASE_URL}favicon.png` },
       { rel: "apple-touch-icon", type: "image/png", href: `${import.meta.env.BASE_URL}favicon.png` },
 

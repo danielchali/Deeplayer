@@ -4,36 +4,32 @@ import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const SITE_URL = "https://danielchali.github.io/Deeplayer";
+const VISION_TITLE = "DPlayer Vision — A Smarter Media Player for Any Video";
+const VISION_DESCRIPTION =
+  "DPlayer makes media intelligent, so you can play, understand, and learn from any video.";
+
 export const Route = createFileRoute("/vision")({
   head: () => ({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "DPlayer Vision — A Smarter Media Player for Any Video" },
-      {
-        name: "description",
-        content:
-          "DPlayer isn't trying to replace VLC. It's making media intelligent — so you can play, understand, and learn from any video.",
-      },
+      { title: VISION_TITLE },
+      { name: "description", content: VISION_DESCRIPTION },
       {
         name: "keywords",
         content: "intelligent media player, video understanding, AI video, DPlayer vision",
       },
-      { property: "og:title", content: "DPlayer Vision — A Smarter Media Player for Any Video" },
-      {
-        property: "og:description",
-        content:
-          "Why DPlayer exists and where it is going. Play. Understand. Learn.",
-      },
-      { property: "og:url", content: "https://deeplayer.vercel.app/vision" },
-      { name: "twitter:title", content: "DPlayer Vision — A Smarter Media Player for Any Video" },
-      {
-        name: "twitter:description",
-        content:
-          "DPlayer makes media intelligent — so you can play, understand, and learn from any video.",
-      },
+      { property: "og:title", content: VISION_TITLE },
+      { property: "og:description", content: VISION_DESCRIPTION },
+      { property: "og:site_name", content: "DPlayer" },
+      { property: "og:url", content: `${SITE_URL}/vision` },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+      { name: "twitter:title", content: VISION_TITLE },
+      { name: "twitter:description", content: VISION_DESCRIPTION },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
     ],
-    links: [{ rel: "canonical", href: "https://deeplayer.vercel.app/vision" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/vision` }],
   }),
   component: VisionPage,
 });
