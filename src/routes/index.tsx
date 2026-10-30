@@ -51,6 +51,8 @@ const highlights = [
   },
 ];
 
+const releaseUrl = "https://github.com/danielchali/DPlayer/releases/tag/v0.0.1";
+
 function Index() {
   return (
     <div className="min-h-screen bg-hero">
@@ -76,7 +78,9 @@ function Index() {
           </p>
           <div className="mt-5 grid gap-3 max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
             <Button asChild variant="brand" className="h-11 px-6">
-              <a href="#download">Get Early Access <ArrowRight className="h-4 w-4" /></a>
+              <a href={releaseUrl} target="_blank" rel="noreferrer">
+                Download DPlayer <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
             <Button asChild variant="link" className="h-11 px-4">
               <Link to="/features">Explore features <ArrowRight className="h-4 w-4" /></Link>
@@ -147,27 +151,13 @@ function Index() {
           Play. <span className="text-gradient">Understand.</span> Learn.
         </h2>
         <p className="mt-5 text-muted-foreground text-lg max-w-2xl mx-auto">
-          Be first to try DPlayer when the early build ships.
+          Download the latest DPlayer release and start playing today.
         </p>
-        <form
-          className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <input
-            type="email"
-            required
-            placeholder="you@domain.com"
-            aria-label="Email address"
-            className="min-w-0 w-full flex-1 h-11 rounded-full bg-card border border-border px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
-          />
-          <Button
-            type="submit"
-            variant="brand"
-            className="h-11 px-6"
-          >
-            Notify me
-          </Button>
-        </form>
+        <Button asChild variant="brand" className="mt-8 h-11 px-6">
+          <a href={releaseUrl} target="_blank" rel="noreferrer">
+            Download DPlayer <ArrowRight className="h-4 w-4" />
+          </a>
+        </Button>
       </section>
 
       <SiteFooter />

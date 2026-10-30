@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const releaseUrl = "https://github.com/danielchali/DPlayer/releases/tag/v0.0.1";
+
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const linkCls =
@@ -25,7 +27,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex shrink-0 items-center gap-2">
           <Button asChild variant="brand" className="hidden h-10 sm:inline-flex">
-            <Link to="/" hash="download" onClick={() => setMenuOpen(false)}>Get Early Access</Link>
+            <a href={releaseUrl} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Download DPlayer</a>
           </Button>
           <Button
             variant="ghost"
@@ -47,7 +49,7 @@ export function SiteHeader() {
             <Link to="/features" className={linkCls} onClick={() => setMenuOpen(false)}>Features</Link>
             <Link to="/vision" className={linkCls} onClick={() => setMenuOpen(false)}>Vision</Link>
             <Button asChild variant="brand" className="mt-2 h-11 w-full sm:hidden">
-              <Link to="/" hash="download" onClick={() => setMenuOpen(false)}>Get Early Access</Link>
+              <a href={releaseUrl} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Download DPlayer</a>
             </Button>
           </div>
         </nav>
